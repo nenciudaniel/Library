@@ -1,0 +1,39 @@
+
+
+<div class="card mb-3">
+  <div class="card-body">
+      <div class="book-card">
+          <div>
+              <img class="book-cover" src="assets/images/default-book-cover.png" *ngIf="book.CoverImageContent === null"/>
+              <img class="book-cover" [src]="sanitizedCoverImage(book.CoverImageContent)" *ngIf="book.CoverImageContent !== null"/>
+          </div>
+
+          <div class="w-100">
+              <div class="title">{{ book.Title }}</div>
+
+              <div class="description">{{ shortDescription }}</div>
+
+              <div class="authors-container">
+                  <div class="author" *ngFor="let author of book.Authors">
+                      {{ author.LastName}} {{author.FirstName}}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="card-header book-card-actions-container">
+      <!--Delete book-->
+      <div class="book-card-action" (click)="showDeleteBookDialog()">
+          <i class="bx bx-trash"></i>
+      </div>
+
+      <!--Edit book-->
+      <div class="book-card-action" (click)="showEditBookDialog()">
+          <i class="bx bx-edit"></i>
+      </div>
+  </div>
+</div>
+
+
+

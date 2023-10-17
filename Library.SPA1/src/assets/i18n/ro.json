@@ -1,0 +1,54 @@
+{
+    "authors":{
+        "title": "Autori"
+    },
+    "books":{
+        "actions":{
+            "addNewAuthor": "Adauga autor",
+            "addNewBook": "Adauga carte"
+        },
+        "authorDialog":{
+            "titleAdd": "Adauga autor",
+            "firstName": "Prenume",
+            "lastName": "Nume",
+            "cancelBtn": "Anuleaza",
+            "saveBtn": "Salveaza"
+        },
+        "bookDialog":{
+            "authors": "Autori",
+            "cancelBtn": "Anuleaza",
+            "description": "Descriere",
+            "saveBtn": "Salveaza",
+            "title": "Titlu",
+            "titleAdd": "Adauga carte",
+            "titleEdit": "Editeaza carte",
+            "uploadCover": "Incarca o coperta"
+        },
+        "title": "Books",
+        "messages":{
+            "add": "Carte adaugata",
+            "delete": "Carte stearsa",
+            "update": "Carte actualizata",
+            "addAuthor": "Autor adaugat"
+        },
+        "question":{
+            "delete": "Esti sigur ca vrei sa stergi aceasta carte?"
+        }
+    },
+    "menu":{
+        "authors": "Autori",
+        "books": "Carti"
+    },
+    "noBtn": "Nu",
+    "noRecord": "Nicio inregistrare disponibila",
+    "paginator":{
+        "ITEMS_PER_PAGE": "Inregistrari pe pagina",
+        "NEXT_PAGE": "Pagina urmatoare",
+        "PREVIOUS_PAGE": "Pagina precedenta",
+        "OF_LABEL": "din"
+    },
+    "required": "obligatoriu",
+    "search": "Cauta",
+    "searchPlaceholder": "Cauta ...",
+    "yesBtn": "Da"
+}

@@ -1,0 +1,22 @@
+.book-card-container{
+    font-size: 13px;
+    height: 330px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 20px;
+    display: flex;
+}
+
+.book-details-container{
+    width: calc(100% - 120px);
+}
+
+.book-cover-container{
+    width: 100px;
+    padding: 25px 0px 0px 20px;
+}
+
+.book-cover-container .book-cover{
+    width: 100px;
+    height: 160px;
+}

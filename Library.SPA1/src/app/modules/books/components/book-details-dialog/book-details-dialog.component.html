@@ -1,0 +1,112 @@
+<span mat-dialog-title class="dialog-title">
+    <span *ngIf="isNew">{{ 'books.bookDialog.titleAdd' | translate }}</span>
+    <span *ngIf="!isNew">{{ 'books.bookDialog.titleEdit' | translate }}</span>
+</span>
+
+<form [formGroup]="form" (submit)="onSubmit()" *ngIf="form">
+    <div class="book-card-container">
+
+    <div class="book-details-container">
+        <!--Title-->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="form-label" for="Title">
+                        {{ 'books.bookDialog.title' | translate }}
+                        <span class="red-color" *ngIf="fields && fields['Title']?.errors">({{ 'required' | translate }})</span>
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           formControlName="Title" />
+                </div>
+            </div>
+        </div>
+
+        <!--Description-->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="form-group">
+                    <label class="form-label" for="Description">
+                        {{ 'books.bookDialog.description' | translate }}
+                        <span class="red-color" *ngIf="fields && fields['Description']?.errors">({{ 'required' | translate }})</span>
+                    </label>
+
+                    <textarea rows="3"
+                              resize="none"
+                              class="form-control"
+                              formControlName="Description"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-12">
+                <label class="form-label" for="Description">
+                    {{ 'books.bookDialog.authors' | translate }}
+                    <span class="red-color" *ngIf="fields && fields['Authors']?.errors">({{ 'required' | translate }})</span>
+                </label>
+
+                    <mat-select (openedChange)="openedChange($event)" [compareWith]="compareCategoryObjects" [placeholder]="'search' | translate" formControlName="Authors" multiple>
+                        <div class="select-container">
+                            <mat-optgroup class="w-100">
+                                <mat-form-field style="width:100%;">
+                                    <input #search autocomplete="off" 
+                                            placeholder="Search" 
+                                            aria-label="Search" 
+                                            matInput [formControl]="searchTextboxControl">
+                                    <button [disableRipple]="true" 
+                                            *ngIf="search.value" 
+                                            matSuffix 
+                                            mat-icon-button 
+                                            aria-label="Clear" 
+                                            (click)="clearSearch($event)">
+                                        <mat-icon>close</mat-icon>
+                                    </button>
+                                </mat-form-field>
+                            </mat-optgroup>
+
+                            <mat-optgroup *ngIf="(filteredOptions | async).length === 0">
+                                <div>({{ 'noRecord' | translate }})</div>
+                            </mat-optgroup>
+                            
+                            <mat-option class="w-100" (onSelectionChange)="selectionChange($event)" *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option.LastName}} {{option.FirstName}}
+                            </mat-option>
+                        </div>
+                    </mat-select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <label class="form-label" for="Description">
+                    {{ 'books.bookDialog.uploadCover' | translate }}
+                </label>
+
+                <input type="file" class="w-100" (change)="uploadFile($event)" />
+            </div>
+        </div>
+        </div>
+
+        <div class="book-cover-container">
+            <img class="book-cover" [src]="sanitizedCoverImage" *ngIf="sanitizedCoverImage !== null" />
+            <img class="book-cover" src="assets/images/default-book-cover.png" *ngIf="sanitizedCoverImage === null" /> 
+        </div>
+    </div>
+
+    <mat-dialog-actions class="justify-content-end">
+        <!--Cancel button-->
+        <button mat-button mat-dialog-close class="black-color me-2">
+          {{ 'books.bookDialog.cancelBtn' | translate }}
+        </button>
+  
+        <!--Save button-->
+        <button mat-button class="dark-green-btn" type="submit">
+          <mat-icon>save</mat-icon>
+          <span class="ms-2">
+            {{ 'books.bookDialog.saveBtn' | translate }}
+          </span>
+        </button>
+      </mat-dialog-actions>
+</form>

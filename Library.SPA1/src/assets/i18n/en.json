@@ -1,0 +1,54 @@
+{
+    "authors":{
+        "title": "Authors"
+    },
+    "books":{
+        "actions":{
+            "addNewAuthor": "Add author",
+            "addNewBook": "Add book"
+        },
+        "authorDialog":{
+            "titleAdd": "Add author",
+            "firstName": "First name",
+            "lastName": "Last name",
+            "cancelBtn": "Cancel",
+            "saveBtn": "Save"
+        },
+        "bookDialog":{
+            "authors": "Authors",
+            "cancelBtn": "Cancel",
+            "description": "Description",
+            "saveBtn": "Save",
+            "title": "Title",
+            "titleAdd": "Add book",
+            "titleEdit": "Edit book",
+            "uploadCover": "Upload cover"
+        },
+        "title": "Books",
+        "messages":{
+            "add": "Book added",
+            "delete": "Book deleted",
+            "update": "Book updated",
+            "addAuthor": "Author added"
+        },
+        "question":{
+            "delete": "Are you sure you want to delete this book?"
+        }
+    },
+    "menu":{
+        "authors": "Authors",
+        "books": "Books"
+    },
+    "noBtn": "No",
+    "noRecord": "No record available",
+    "paginator":{
+        "ITEMS_PER_PAGE": "Items per page",
+        "NEXT_PAGE": "Next page",
+        "PREVIOUS_PAGE": "Previous page",
+        "OF_LABEL": "of"
+    },
+    "required": "required",
+    "search": "Search",
+    "searchPlaceholder": "Search ...",
+    "yesBtn": "Yes"
+}

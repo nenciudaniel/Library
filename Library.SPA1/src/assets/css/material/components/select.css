@@ -1,0 +1,12 @@
+.mat-mdc-option{
+  font-size: 13px !important;
+}
+
+.mat-mdc-optgroup .mdc-list-item__primary-text{
+  width: 100%!important;
+}
+
+.mat-mdc-select-min-line{
+    font-size: 13px!important;
+    color: #697a8d;
+}

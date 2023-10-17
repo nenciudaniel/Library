@@ -1,0 +1,181 @@
+﻿:root {
+    --blue-color: #00338D;
+    --blue-transparent-color: rgba(0, 51, 141, 0.07);
+    --medium-blue-color: #005EB8;
+    --medium-blue-transparent-color: rgba(0, 94, 184, 0.07);
+    --light-blue-color: #0091DA;
+    --light-blue-transparent-color: rgba(0, 145, 218, 0.07);
+    --amber-color: #EAAA00;
+    --amber-transparent-color: rgba(234, 170, 0, 0.07);
+    --orange-color: #F68D2E;
+    --orange-transparent-color: rgba(246, 141, 46, 0.07);
+    --red-color: #BC204B;
+    --red-transparent-color: rgba(188, 32, 75, 0.07);
+    --purple-color: #6D2077;
+    --purple-transparent-color: rgba(109, 32, 119, 0.07);
+    --light-green-color: #00BAB3;
+    --light-green-transparent-color: rgba(0, 186, 179, 0.07);
+    --dark-green-color: #009A44;
+    --dark-green-transparent-color: rgba(0, 154, 68, 0.07);
+    --green-color: #43B02A;
+    --green-transparent-color: rgba(67, 176, 42, 0.07);
+    --grey-color: #f3f3f3;
+    --grey-transparent-color: rgba(243, 243, 243, 0.07);
+    --dark-grey-color: #818896;
+    --dark-grey-transparent-color: rgba(129, 136, 150, 0.07);
+    --grey-alt-color: #dee2e6;
+    --grey-alt-transparent-color: rgba(222, 226, 230, 0.07);
+    --black-color: #495057;
+    --white-color: #ffffff;
+    --blue-magenta-color: #483698;
+    --blue-magenta-transparent-color: rgba(72, 54, 152, 0.07);
+    --border-color: #00000014;
+}
+
+/*COLORS*/
+.green-color {
+    color: var(--green-color) !important;
+}
+
+.red-color {
+    color: var(--red-color) !important;
+}
+
+.blue-color {
+    color: var(--blue-color) !important;
+}
+
+.medium-blue-color {
+    color: var(--medium-blue-color) !important;
+}
+
+.light-blue-color {
+    color: var(--light-blue-color) !important;
+}
+
+.orange-color {
+    color: var(--orange-color) !important;
+}
+
+.amber-color {
+    color: var(--amber-color) !important;
+}
+
+.purple-color {
+    color: var(--purple-color) !important;
+}
+
+.white-color {
+    color: var(--white-color) !important;
+}
+
+.light-green-color {
+    color: var(--light-green-color) !important;
+}
+
+.dark-green-color {
+    color: var(--dark-green-color) !important;
+}
+
+.blue-magenta-color {
+    color: var(--blue-magenta-color) !important;
+}
+
+.black-color {
+    color: var(--black-color) !important;
+}
+
+.grey-alt-color {
+    color: var(--grey-alt-color) !important;
+}
+
+.dark-grey-color {
+    color: var(--dark-grey-color) !important;
+}
+/*COLORS*/
+
+/*BACKGROUND-COLORS*/
+.grey-alt-background-color {
+    background-color: var(--grey-alt-color) !important;
+}
+
+.green-background-color {
+    background-color: var(--green-color) !important;
+}
+
+.red-background-color {
+    background-color: var(--red-color) !important;
+}
+
+.blue-background-color {
+    background-color: var(--blue-color) !important;
+}
+
+.orange-background-color {
+    background-color: var(--orange-color) !important;
+}
+
+.purple-background-color {
+    background-color: var(--purple-color) !important;
+}
+
+.red-background-color {
+    background-color: var(--red-color) !important;
+}
+
+.light-blue-background-color {
+    background-color: var(--light-blue-color) !important;
+}
+
+.dark-green-background-color {
+    background-color: var(--dark-green-color) !important;
+}
+
+.white-background-color {
+    background-color: white !important;
+}
+
+.blue-magenta-background-color {
+    background-color: var(--blue-magenta-color) !important;
+}
+
+.medium-blue-background-color {
+    background-color: var(--medium-blue-color) !important;
+}
+
+.dark-grey-background-color {
+    background-color: var(--dark-grey-color) !important;
+}
+
+.blue-transparent-bg {
+    background-color: rgba(0, 51, 141, 0.07) !important;
+}
+
+.light-blue-transparent-bg {
+    background-color: rgba(0, 145, 218, 0.07) !important;
+}
+
+.purple-transparent-bg {
+    background-color: rgba(71, 10, 104, 0.07) !important;
+}
+
+.amber-transparent-bg {
+    background-color: rgba(234, 170, 0, 0.07) !important;
+}
+
+.orange-transparent-bg {
+    background-color: rgba(246, 141, 46, 0.07) !important;
+}
+
+.dark-green-transparent-bg {
+    background-color: rgba(0, 154, 68, 0.07) !important;
+}
+
+.red-transparent-bg {
+    background-color: rgba(188, 32, 75, 0.07) !important;
+}
+
+.dark-grey-transparent-bg {
+    background-color: rgba(128, 128, 128, 0.07) !important;
+}
+/*BACKGROUND-COLORS*/

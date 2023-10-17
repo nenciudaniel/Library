@@ -1,0 +1,29 @@
+.mat-mdc-dialog-container {
+    padding: 12px !important;
+}
+
+    .mat-mdc-dialog-container .mdc-dialog__content {
+        color: unset !important;
+        letter-spacing: 0 !important;
+        font-size: 14px !important;
+    }
+
+.mdc-dialog__content {
+    padding: 12px !important;
+}
+
+.mat-mdc-dialog-actions {
+    margin-top: 15px !important;
+    min-height: 30px !important;
+    border-top: 1px solid var(--grey-alt-color) !important;
+}
+
+/*dialog header*/
+.mat-mdc-dialog-title {
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+    color: var(--dark-grey-color);
+    border-bottom: 1px solid var(--grey-color);
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}

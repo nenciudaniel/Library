@@ -1,0 +1,36 @@
+<div class="confirmation-container">
+  <div class="icon-container">
+    <div class="icon-wrapper">
+      <mat-icon class="custom-icon" *ngIf="data?.icon" [ngClass]="getIconClass()">{{data?.icon}}</mat-icon>
+      <mat-icon class="custom-icon" *ngIf="!data?.icon">warning</mat-icon>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <div class="question">
+      <span *ngIf="data?.textTranslateKey">
+        {{ data?.textTranslateKey | translate }}
+      </span>
+
+      <span *ngIf="data?.text">
+        {{ data?.text | translate }}
+      </span>
+
+      <div class="actions-row">
+        <!--No button-->
+        <button mat-button mat-dialog-close class="black-color me-2">
+          <span *ngIf="data?.cancelButtonTextTranslateKey">{{ data?.cancelButtonTextTranslateKey | translate }}</span>
+          <span *ngIf="!data?.cancelButtonTextTranslateKey">{{ 'noBtn' | translate }}</span>
+        </button>
+
+        <!--Yes button-->
+        <button mat-button
+                [ngClass]="getSubmitButtonClass()"
+                (click)="onConfirmClick()">
+          <span *ngIf="data?.confirmButtonTextTranslateKey">{{ data?.confirmButtonTextTranslateKey | translate }}</span>
+          <span *ngIf="!data?.confirmButtonTextTranslateKey">{{ 'yesBtn' | translate }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

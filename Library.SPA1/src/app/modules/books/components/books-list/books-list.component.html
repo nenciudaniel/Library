@@ -1,0 +1,53 @@
+
+<div class="row">
+    <div class="col-12">
+        <div class="d-flex justify-content-end">
+            <button class="btn dark-green-btn me-2" (click)="showAddAuthorDialog()">
+                {{ 'books.actions.addNewAuthor' | translate }}
+            </button>
+            <button class="btn dark-green-btn" (click)="showAddBookDialog()">
+                {{ 'books.actions.addNewBook' | translate }}
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-1 vertical-align-center">
+    <!--Search textbox-->
+    <div class="col-12">
+        <div class="form-group">
+            <label class="form-label">
+                {{ 'search' | translate }}
+            </label>
+
+            <mat-form-field class="w-100" appearance="outline">
+                <input matInput
+                       (keyup)="onSearchChange($event)"
+                       class="w-100"
+                       autocomplete="off"
+                       placeholder="{{ 'searchPlaceholder' | translate }}">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
+
+<ng-container *ngIf="books">
+    <div class="row">
+        <div class="col-12 col-md-4" *ngFor="let book of books.Items">
+            <book-card [book]="book" (output)="onBookChanged($event)"></book-card>
+        </div>
+    </div>
+
+    <!--Paginator-->
+    <mat-paginator (page)="handlePageEvent($event)"
+                   [length]="books.Total"
+                   [pageSize]="filters.PageSize"
+                   [pageIndex]="filters.CurrentPage"
+                   aria-label="Select page">
+    </mat-paginator>
+</ng-container>
+
+
+
+

@@ -1,0 +1,107 @@
+
+<div class="layout-wrapper layout-content-navbar">
+  <div class="layout-container">
+      <!-- Menu -->
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+              <div class="app-brand-link">
+                  <span class="app-brand-logo demo">
+                      <i class="menu-icon tf-icons bx bx-library"></i>
+                  </span>
+                  <span class="app-brand-text demo menu-text fw-bold ms-2">Library</span>
+              </div>
+
+              <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                  <i class="bx bx-chevron-left bx-sm align-middle"></i>
+              </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1 overflow-auto">
+              <!-- Books -->
+              <li class="menu-item" [routerLink]="['/books']" [routerLinkActive]="['active']">
+                  <a class="menu-link">
+                      <i class="menu-icon tf-icons bx bx-book-open"></i>
+                      <div>{{ 'menu.books' | translate }}</div>
+                  </a>
+              </li>
+
+              <!-- Authors -->
+              <li class="menu-item" [routerLink]="['/authors']" [routerLinkActive]="['active']">
+                  <a class="menu-link">
+                      <i class='menu-icon tf-icons bx bx-book-reader'></i>
+                      <div>{{ 'menu.authors' | translate }}</div>
+                  </a>
+              </li>
+          </ul>
+      </aside>
+
+      <!-- Layout container -->
+      <div class="layout-page">
+          <!-- Navbar -->
+          <nav class="layout-navbar container-fluid navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+               id="layout-navbar">
+              <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                  <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                      <i class="bx bx-menu bx-sm"></i>
+                  </a>
+              </div>
+
+              <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                  <div class="navbar-nav align-items-center">
+                    <span class="page-title">Books</span>
+                  </div>
+
+                  <ul class="navbar-nav flex-row align-items-center ms-auto">
+                      <!-- User -->
+                      <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                          <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                              <div class="avatar avatar-online">
+                                  <div class="profile-icon-initials rounded-circle">DN</div>
+                              </div>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                              <li>
+                                  <a class="dropdown-item" href="#">
+                                      <div class="d-flex">
+                                          <div class="flex-grow-1">
+                                              <span class="fw-medium d-block">Daniel Nenciu</span>
+
+                                              <div class="w-100">
+                                                <img class="layout-language-flag me-2" src="assets/images/language-flags/en.svg" (click)="changeLanguage('en')" />
+                                                <img class="layout-language-flag" src="assets/images/language-flags/ro.svg" (click)="changeLanguage('ro')" />
+                                              </div>
+
+                                              <small class="text-muted">Admin</small>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+              <div class="container-fluid flex-grow-1 container-p-y">
+                  <div class="layout-demo-wrapper">
+                      <div class="layout-demo-placeholder">
+                          <router-outlet></router-outlet>
+
+                          <div id="dialog"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+      </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="layout-overlay layout-menu-toggle"></div>
+</div>

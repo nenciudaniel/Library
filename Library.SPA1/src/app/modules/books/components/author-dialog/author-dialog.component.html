@@ -1,0 +1,56 @@
+<span mat-dialog-title class="dialog-title">
+    <span>{{ 'books.authorDialog.titleAdd' | translate }}</span>
+</span>
+
+<form [formGroup]="form" (submit)="onSubmit()" *ngIf="form">
+    <div class="author-card-container">
+        <div class="author-details-container">
+            <!--FirstName-->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="form-label" for="FirstName">
+                            {{ 'books.authorDialog.firstName' | translate }}
+                            <span class="red-color" *ngIf="fields && fields['FirstName']?.errors">({{ 'required' | translate }})</span>
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               formControlName="FirstName" />
+                    </div>
+                </div>
+            </div>
+
+            <!--LastName-->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="form-label" for="LastName">
+                            {{ 'books.authorDialog.lastName' | translate }}
+                            <span class="red-color" *ngIf="fields && fields['LastName']?.errors">({{ 'required' | translate }})</span>
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               formControlName="LastName" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <mat-dialog-actions class="justify-content-end">
+        <!--Cancel button-->
+        <button mat-button mat-dialog-close class="black-color me-2">
+            {{ 'books.authorDialog.cancelBtn' | translate }}
+        </button>
+
+        <!--Save button-->
+        <button mat-button class="dark-green-btn" type="submit">
+            <mat-icon>save</mat-icon>
+            <span class="ms-2">
+                {{ 'books.authorDialog.saveBtn' | translate }}
+            </span>
+        </button>
+    </mat-dialog-actions>
+</form>
